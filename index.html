@@ -109,38 +109,7 @@
 <div id="fb-root"></div>
 
 
-<script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId   : '907050789387318',
-          cookie  : true,
-          status  : true,
-          xfbml   : true 
-        });
 
-        FB.Event.subscribe('auth.login', function(response) {
-          window.location.reload();
-        });
-
-        FB.api('/me/friends',function(resp) {
-            if(resp && resp.data.length) {
-                var html = '<ul>';
-                for(var i=0; i<resp.data.length; i++) {
-                    html += '<li><img src="http://graph.facebook.com/' + resp.data[i].id + '/picture?type=small" />' + resp.data[i].name + '</li>';
-                }
-                html += '</ul>';
-                document.getElementById('friends').innerHTML = html;
-            }
-        });
-      };
-
-      (function() {
-        var e = document.createElement('script');
-        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-        e.async = true;
-        document.getElementById('fb-root').appendChild(e);
-      }());
-    </script>
     
     
     <div class="row">
