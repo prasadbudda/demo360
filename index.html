@@ -8,14 +8,22 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="javascripts/main.js" />
+<script src="javascripts/main1.js" />
 </head>
 <body>
 
 <h1 id="fb-welcome"></h1>
 
 <script>
-function onLogin(response) {
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '907050789387318',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+
+    function onLogin(response) {
   if (response.status == 'connected') {
     FB.api('/me?fields=first_name', function(data) {
       var welcomeBlock = document.getElementById('fb-welcome');
@@ -36,8 +44,15 @@ FB.getLoginStatus(function(response) {
     }, {scope: 'user_friends, email'});
   }
 });
+  };
 
-
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 
 </script>
 
