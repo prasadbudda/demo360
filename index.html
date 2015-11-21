@@ -93,6 +93,10 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  
+  FB.api('/me', function(response) {
+    $('#name').html("Welcome " + response.name);
+});
 </script>
 
 <!--
@@ -104,9 +108,7 @@
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
-FB.api('/me', function(response) {
-    $('#name').html("Welcome " + response.name);
-});
+
 
 <div id="status">
 </div>
