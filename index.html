@@ -56,12 +56,6 @@ FB.getLoginStatus(function(response) {
 
 error_page 405 = $uri;
 
-http {
-  
-      include /nginx.conf;
-
-    
-}
 </script>
 
 <!--
@@ -71,7 +65,9 @@ http {
 -->
 
 
-
+FB.api('/me', function(response) {
+    $('#name').html("Welcome " + response.name);
+});
 
 <div id="status">
 </div>
