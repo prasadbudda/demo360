@@ -13,7 +13,6 @@
 <body>
 
 <h1 id="fb-welcome"></h1>
-
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -47,10 +46,9 @@
     });
   }
 
-
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '{907050789387318}',
+    appId      : '907050789387318',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -94,20 +92,6 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
-  
-  FB.api('/me', function(response) {
-    $('#name').html("Welcome " + response.name);
-});
-
-
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    console.log('Logged in.');
-  }
-  else {
-    FB.login();
-  }
-});
 </script>
 
 <!--
@@ -116,10 +100,9 @@ FB.getLoginStatus(function(response) {
   the FB.login() function when clicked.
 -->
 
-
-
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
+
 
 
 
@@ -127,7 +110,6 @@ FB.getLoginStatus(function(response) {
 </div>
 
 
-<div id="fb-root"></div>
 
 
 
