@@ -47,6 +47,7 @@
     });
   }
 
+
   window.fbAsyncInit = function() {
   FB.init({
     appId      : '{907050789387318}',
@@ -104,6 +105,15 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('Logged in.');
+  }
+  else {
+    FB.login();
+  }
+});
+
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
