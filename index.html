@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1 id="fb-welcome"></h1>
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -102,8 +102,7 @@
 
 
 
-<div id="status">
-</div>
+
 
 
 
@@ -113,7 +112,10 @@
     
     <div class="row">
       <div class="col-lg-1 col-lg-offset-11">
+        <h1 id="fb-welcome"></h1>
         <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();"  data-max-rows="2" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+      <div id="status">
+</div>
       </div>
       
       <div class="col-lg-8">
