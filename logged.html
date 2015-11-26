@@ -26,8 +26,9 @@ FB.getLoginStatus(function(response) {
     document.getElementById('status').innerHTML =
         'Welcome, ' + response.name + '!';
   } else if (response.status === 'not_authorized') {
-    window.location = "http://prasadbudda.github.io/demo360/index.html";
+    
   } else {
+    window.location = "http://prasadbudda.github.io/demo360/index.html";
     // the user isn't logged in to Facebook.
   }
 });
