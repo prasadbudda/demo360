@@ -8,8 +8,9 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script src="javascripts/main.js"></script>
 </head>
+<body>
 <style>
  body {
   padding-top: 40px;
@@ -51,8 +52,6 @@
   border-top-right-radius: 0;
 }
 </style>
-
-<body>
 <script>
  // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -118,14 +117,6 @@
   }(document, 'script', 'facebook-jssdk'));
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
-    function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-          window.location = "http://prasadbudda.github.io/demo360/logged.html";
-      });
   }
 </script>
 
@@ -142,15 +133,17 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block">Log in</button>
+        <button class="fb-login-button btn btn-lg btn-primary btn-block" scope="public_profile,email" onlogin="checkLoginState();"  data-max-rows="2" data-size="medium" data-show-faces="false" data-auto-logout-link="true" type="submit">Log in</button>
       </form>
 
     </div> <!-- /container -->
+<button onclick="myFacebookLogin()">New Button</button>
 <div class="row">
-<div class="col-lg-12" style="text-align:center;">
- <b>Or using Facebook</b>&nbsp;<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();"  data-max-rows="2" data-size="medium" data-show-faces="false" data-auto-logout-link="true" type="submit"></div>
+<div class="col-lg-12>Please Login</div>
+<div class="col-lg-2">
+<div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();"  data-max-rows="2" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
 </div> 
 </div>
-
+<div id="status"></div>
 </body>
 </html>
