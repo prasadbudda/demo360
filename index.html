@@ -94,7 +94,10 @@
     version    : 'v2.2' // use version 2.2
   });
   
-  FB.Event.subscribe('auth.login', function () {
+    function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
           window.location = "http://prasadbudda.github.io/demo360/logged.html";
       });
 
