@@ -1,12 +1,6 @@
 console.log('This would be the main JS file.');
 
 
-// Only works after `FB.init` is called
-function myFacebookLogin() {
-  FB.login(function(){}, {scope: 'publish_actions'});
-}
-
-
  // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
