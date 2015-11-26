@@ -20,6 +20,7 @@ console.log('This would be the main JS file.');
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
+         window.location = "http://prasadbudda.github.io/demo360/index.html";
     }
   }
 
