@@ -27,14 +27,14 @@ $('#datepicker4').datepicker();
     <input class="span2" size="16" type="text" data-bind="value: Customer.DateOfBirth" readonly="readonly" />
     <span class="add-on"><i class="icon-calendar"></i></span>
     
-                <div class="input-group" id="datepicker1" data-date="dateValue: Job.StartDate" data-date-format="dd-mm-yyyy">
+                <div class="input-group" data-date="dateValue: Job.StartDate" data-date-format="dd-mm-yyyy">
                 <input type="text" class="form-control input-md hasDatepicker" data-bind="value: Job.StartDate" placeholder="Start Date">
-                <span class="input-group-addon" style="padding: 0px 3px;"><a><i class="fa fa-calendar"></i></a></span>
+                <span class="input-group-addon" style="padding: 0px 3px;"><a><i class="fa fa-calendar" id="datepicker1"></i></a></span>
              </div>
              <br/>
-             <div class="input-group" id="datepicker2" data-date="dateValue: Job.EndDate" data-date-format="dd-mm-yyyy">
+             <div class="input-group" data-date="dateValue: Job.EndDate" data-date-format="dd-mm-yyyy">
                  <input type="text" class="form-control input-md hasDatepicker" data-bind="value: Job.EndDate"  placeholder="End Date">
-                 <span class="input-group-addon" style="padding: 0px 3px;"><a><i class="fa fa-calendar" ></i></a></span>
+                 <span class="input-group-addon" style="padding: 0px 3px;"><a><i class="fa fa-calendar" id="datepicker2" ></i></a></span>
              </div>
 </div>   
 </body>
