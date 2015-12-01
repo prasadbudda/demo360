@@ -7,6 +7,9 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    @import url('http://getbootstrap.com/2.3.2/assets/css/bootstrap.css');
+  </style>
   <script>
   $(function() {
     $( "#datepicker" ).datepicker();
@@ -15,7 +18,7 @@
   </script>
 </head>
 <body>
-<p>Date: <input type="text" id="datepicker"></p>
+<p>Date: <input type="text" id="datepicker1"></p>
              <div class="input-group" id="datepicker2" data-date="dateValue: Job.EndDate" data-date-format="dd-mm-yyyy">
                  <input type="text" class="form-control input-md hasDatepicker" data-bind="value: Job.EndDate"  placeholder="End Date">
                  <span class="input-group-addon" style="padding: 0px 3px;"><a><i class="fa fa-calendar" ></i></a></span>
